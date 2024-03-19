@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praktikum3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <p class="poopins-medium"><strong>WE ARE HIRING!</strong></p>
+        <div class="image-center">
+            <img src="Asset/5-cara-menghindari-agar-laptop-tidak-cepat-panas-mudah-dilakukan.jpg" alt="" width="70%"
+                 style="border-radius: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0.1);">
+        </div>
+
+        <p class="txt-waktu" id="hasil"></p>
+        <br>
+        <div class="poppins-regular">Join Our Team:</div>
+        <ul>
+            <li>CopyWriter</li>
+            <li>Graphic Designer</li>
+            <li>Social Media Manager</li>
+        </ul>
+        <br>
+        <button style="cursor: pointer;" onclick="show()">Check</button>
+    </div>
+
+    <script>
+        function show() {
+            var options = {
+                timeZone: 'Asia/Jakarta',
+                hour12: false,
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            var formatter = new Intl.DateTimeFormat('en-US', options);
+            var tanggal = formatter.format(new Date());
+            document.getElementById("hasil").innerHTML = tanggal;
+        }
+        show(); // Call the function initially to display the date and time
+    </script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
